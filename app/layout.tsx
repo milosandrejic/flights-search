@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const popins = Poppins({
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+    variable: "--font-poppins",
+    subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -24,7 +21,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${popins.variable}`}>
+        <header style={{textAlign: "center"}}>
+            <Image
+                src="/logo.svg"
+                alt="flying plane"
+                width={150}
+                height={150}
+            />
+
+            <h2>Search flights</h2>
+        </header>
         {children}
       </body>
     </html>
