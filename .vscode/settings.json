@@ -1,0 +1,7 @@
+{
+    "eslint.nodePath": "./node_modules",
+    "eslint.useESLintClass": true,
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2
+  }
+  
